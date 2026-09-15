@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "PT-.#####",
+ "creation": "2026-09-11 12:26:26.698816",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "notes",
+  "amended_from",
+  "column_break_ihdz",
+  "currency",
+  "rate",
+  "column_break_xqzo",
+  "transaction_date",
+  "total",
+  "section_break_b1ht",
+  "account_paid_from",
+  "column_break_mpjs",
+  "credit_current_balance",
+  "column_break_hxml",
+  "credit_post_transaction_balance",
+  "cash_in_debit_section",
+  "account_paid_to",
+  "column_break_rppo",
+  "debit_current_balance",
+  "column_break_updo",
+  "debit_post_transaction_balance"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_b1ht",
+   "fieldtype": "Section Break",
+   "label": "Cash out (Credit)"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Partner Transfer",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cash_in_debit_section",
+   "fieldtype": "Section Break",
+   "label": "Cash in (Debit)"
+  },
+  {
+   "fieldname": "account_paid_from",
+   "fieldtype": "Link",
+   "label": "Account Paid From",
+   "link_filters": "[[\"Account\",\"is_group\",\"=\",0],[\"Account\",\"company\",\"=\",\"eval:doc.company\"],[\"Account\",\"account_type\",\"=\",\"Bank\"],[\"Account\",\"account_currency\",\"=\",\"eval:doc.currency\"]]",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account_paid_to",
+   "fieldtype": "Link",
+   "label": "Account Paid Into",
+   "link_filters": "[[\"Account\",\"is_group\",\"=\",0],[\"Account\",\"company\",\"=\",\"eval: doc.company\"],[\"Account\",\"account_type\",\"=\",\"Bank\"],[\"Account\",\"account_currency\",\"=\",\"eval:doc.currency\"]]",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ihdz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "column_break_xqzo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "notes",
+   "fieldtype": "Int",
+   "label": "Notes",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "Rate",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "column_break_mpjs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "credit_current_balance",
+   "fieldtype": "Float",
+   "label": "Current Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hxml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "credit_post_transaction_balance",
+   "fieldtype": "Float",
+   "label": "Post Transaction Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rppo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_updo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "debit_post_transaction_balance",
+   "fieldtype": "Float",
+   "label": "Post Transaction Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "debit_current_balance",
+   "fieldtype": "Float",
+   "label": "Current Balance",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-09-11 18:43:44.732768",
+ "modified_by": "Administrator",
+ "module": "Fxshop",
+ "name": "Partner Transfer",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "mask": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FX Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

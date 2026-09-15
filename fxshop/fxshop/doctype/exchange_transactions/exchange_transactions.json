@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "FX-.####",
+ "creation": "2026-09-09 18:00:29.239091",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_swmt",
+  "transaction_date",
+  "company",
+  "doctype_link",
+  "teller",
+  "column_break_zbvh",
+  "buy_or_sell",
+  "customer",
+  "warehouse",
+  "amended_from",
+  "items_section",
+  "currency",
+  "column_break_yejo",
+  "number_of_notes",
+  "column_break_mwue",
+  "rate",
+  "column_break_hwbr",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_swmt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Transaction Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Exchange Transactions",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_zbvh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Dynamic Link",
+   "label": "Customer",
+   "options": "doctype_link",
+   "reqd": 1
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Items (put child table for multiple items)"
+  },
+  {
+   "default": "EUR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "link_filters": "[[\"Item\",\"item_group\",\"=\",\"Currencies\"]]",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yejo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "100",
+   "fieldname": "number_of_notes",
+   "fieldtype": "Int",
+   "label": "Number of Notes",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mwue",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "Rate",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hwbr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "default": "Buy",
+   "fieldname": "buy_or_sell",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Buy or Sell",
+   "options": "Buy\nSell",
+   "reqd": 1
+  },
+  {
+   "default": "Supplier",
+   "fieldname": "doctype_link",
+   "fieldtype": "Link",
+   "label": "DocType Link",
+   "link_filters": "[[\"DocType\",\"name\",\"in\",[\"Customer\",\"Supplier\"]]]",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "default": "Stores - SLLC",
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "link_filters": "[[\"Warehouse\",\"company\",\"=\",\"eval:doc.company\"]]",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "teller",
+   "fieldtype": "Link",
+   "label": "Teller",
+   "options": "Mode of Payment",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-09-12 13:15:50.034872",
+ "modified_by": "Administrator",
+ "module": "Fxshop",
+ "name": "Exchange Transactions",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "mask": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FX Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

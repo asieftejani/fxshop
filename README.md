@@ -1,6 +1,13 @@
 ### Fxshop
 
-App for FX Shop
+FX Shop - Simplified Currency/Exchange transactions on top of ERPNext (required dependency)
+
+Only 2 DocTypes so far: -
+
+1) Exchange Transactions - Treats each currency (USD, EUR, AED, etc..) as stock so that gross profit per transaction can be known using either FIFO/LIFO/AVCO method. May not be in line with IAS 2/21 or IFRS 9
+2) Partner Transfer - Nostro/Vostro transactions done by partners in other countries
+
+Let me know on Telegram (https://t.me/Asieftejani) or emal (asief.tejanI@gmail.com) if you are interested in developing it further according to your needs
 
 ### Installation
 
