@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_4jb8",
+  "transaction_date",
   "frequency",
   "branch",
   "expense_name",
@@ -17,7 +18,8 @@
   "priority",
   "company",
   "currency",
-  "amount"
+  "amount",
+  "rate"
  ],
  "fields": [
   {
@@ -56,7 +58,7 @@
    "fieldname": "expense_name",
    "fieldtype": "Link",
    "label": "Expense Name (Debit Account)",
-   "link_filters": "[[\"Account\",\"root_type\",\"=\",\"Expense\"],\n[\"Account\",\"company\",\"=\",\"eval: doc.company\"]]",
+   "link_filters": "[[\"Account\",\"root_type\",\"=\",\"Expense\"],[\"Account\",\"company\",\"=\",\"eval: doc.company\"],[\"Account\",\"is_group\",\"=\",0]]",
    "options": "Account"
   },
   {
@@ -84,15 +86,27 @@
    "fieldname": "paid_from",
    "fieldtype": "Link",
    "label": "Paid from (Credit Account)",
-   "link_filters": "[\n[\"Account\",\"account_type\",\"in\",[\"Cash\",\"Bank\"]],\n[\"Account\",\"company\",\"=\",\"eval:doc.company\"]\n]",
+   "link_filters": "[[\"Account\",\"account_type\",\"in\",[\"Cash\",\"Bank\"]],[\"Account\",\"company\",\"=\",\"eval:doc.company\"],[\"Account\",\"is_group\",\"=\",0]]",
    "options": "Account"
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "default": "1",
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "Rate"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-09-24 18:07:13.974547",
+ "modified": "2026-09-24 18:59:03.529842",
  "modified_by": "Administrator",
  "module": "Fxshop",
  "name": "Expenses and Costs",
