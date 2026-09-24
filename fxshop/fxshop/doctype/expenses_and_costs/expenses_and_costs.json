@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "EXP-.#####",
+ "creation": "2026-09-24 17:22:19.760750",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_4jb8",
+  "frequency",
+  "branch",
+  "expense_name",
+  "paid_from",
+  "amended_from",
+  "column_break_rjgk",
+  "priority",
+  "company",
+  "currency",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_4jb8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Expenses and Costs",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "Daily\nWeekly\nMonthly\nAnnual\nOne-time"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Essential\nNormal\nLow Priority"
+  },
+  {
+   "fieldname": "expense_name",
+   "fieldtype": "Link",
+   "label": "Expense Name (Debit Account)",
+   "link_filters": "[[\"Account\",\"root_type\",\"=\",\"Expense\"],\n[\"Account\",\"company\",\"=\",\"eval: doc.company\"]]",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_rjgk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Int",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "paid_from",
+   "fieldtype": "Link",
+   "label": "Paid from (Credit Account)",
+   "link_filters": "[\n[\"Account\",\"account_type\",\"in\",[\"Cash\",\"Bank\"]],\n[\"Account\",\"company\",\"=\",\"eval:doc.company\"]\n]",
+   "options": "Account"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-09-24 18:07:13.974547",
+ "modified_by": "Administrator",
+ "module": "Fxshop",
+ "name": "Expenses and Costs",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

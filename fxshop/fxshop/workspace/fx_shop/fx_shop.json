@@ -1,7 +1,7 @@
 {
  "app": "fxshop",
  "charts": [],
- "content": "[{\"id\":\"-tiQu_VRUl\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Welcome to the FX Shop workspace</span>\",\"col\":12}},{\"id\":\"NQtOGnZeRS\",\"type\":\"paragraph\",\"data\":{\"text\":\"Transactions\",\"col\":12}},{\"id\":\"fWeIYZMS3n\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Partner Transfer\",\"col\":4}},{\"id\":\"2wdZGMkmsu\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Exchange Transactions\",\"col\":4}},{\"id\":\"nrse2Sljgt\",\"type\":\"paragraph\",\"data\":{\"text\":\"Reports\",\"col\":12}},{\"id\":\"tZQ9KWLPCs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Ledger Report\",\"col\":3}},{\"id\":\"_ePy0n9KM0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Profit and Loss Report\",\"col\":3}},{\"id\":\"Osx8qn63kp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gross Profit Report\",\"col\":3}}]",
+ "content": "[{\"id\":\"-tiQu_VRUl\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Welcome to the FX Shop workspace</span>\",\"col\":12}},{\"id\":\"NQtOGnZeRS\",\"type\":\"paragraph\",\"data\":{\"text\":\"Transactions\",\"col\":12}},{\"id\":\"fWeIYZMS3n\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Partner Transfer\",\"col\":4}},{\"id\":\"2wdZGMkmsu\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Exchange Transactions\",\"col\":4}},{\"id\":\"nrse2Sljgt\",\"type\":\"paragraph\",\"data\":{\"text\":\"Reports\",\"col\":12}},{\"id\":\"tZQ9KWLPCs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Ledger Report\",\"col\":3}},{\"id\":\"_ePy0n9KM0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Profit and Loss Report\",\"col\":3}},{\"id\":\"Osx8qn63kp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gross Profit Report\",\"col\":3}},{\"id\":\"j8pxeBpnG8\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Expenses and Costs\",\"col\":4}}]",
  "creation": "2026-09-12 22:11:46.443554",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "label": "FX Shop",
  "link_type": "DocType",
  "links": [],
- "modified": "2026-09-12 22:20:21.746196",
+ "modified": "2026-09-24 17:33:50.681009",
  "modified_by": "Administrator",
  "module": "Fxshop",
  "name": "FX Shop",
@@ -21,6 +21,11 @@
  "owner": "Administrator",
  "public": 1,
  "quick_lists": [
+  {
+   "document_type": "Expenses and Costs",
+   "label": "Expenses and Costs",
+   "quick_list_filter": "[]"
+  },
   {
    "document_type": "Exchange Transactions",
    "label": "Exchange Transactions",

@@ -1,7 +1,7 @@
 We need to create 4 custom DocTypes for ERPNext system and connect them properly to the accounting system:
 
-1. Hawala and Reverse Hawala
-2. Exchange Transaction & Trading of currencies
+1. Partner Transfers (Hawala and Reverse Hawala)
+2. Exchange Transaction (includes Trading of currencies)
 3. Expenses and Costs Form
 
     Expenses and costs are divided into two categories.
@@ -125,7 +125,7 @@ We need to create 4 custom DocTypes for ERPNext system and connect them properly
     The dashboard should only display information.
     Investors should not be able to directly edit capital, profit, balances, or transactions from the dashboard.
 
-4. Profit Distribution Form for Investors and Employees
+5. Profit Distribution Form for Investors and Employees
 
     For Profit Distribution, it would be better to use IRR as the basis, because our actual capital is also in IRR.
     The company's base currency is set to USD for future purposes.
@@ -141,7 +141,7 @@ We need to create 4 custom DocTypes for ERPNext system and connect them properly
     Paid From — Cash / Bank / or any other account. The balance of the selected cash or bank account must be updated accordingly.
     Finally, the form should be submitted to the Owner for approval. The payment should only be allowed after the Owner approves the expense.
 
-5. Investor Registration Form
+6. Investor Registration Form
 
     a. Investor First Name
     b. Investor Last Name
