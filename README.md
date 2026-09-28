@@ -42,7 +42,7 @@ Planning on these DocTypes: -
     h. Upload Documents and Add Description
     i. Comment / Note
 
-4. Investor Capital Deposit & Withdrawal Form
+4. Investor Capital/Profit Deposit and Withdrawal & Form
 
     The following fields are required for the Capital Entry form:
 
@@ -57,6 +57,7 @@ Planning on these DocTypes: -
         ii - Additional Capital
         iii - Partial Capital Withdrawal
         iv - Full Capital Withdrawal
+        v - Profit Distribution
     e. Capital Branch
     - Select the branch where the capital is deposited/held, for example: Zahedan Branch or Kabul Branch.
     f. Cash/Bank Account
@@ -108,26 +109,6 @@ Planning on these DocTypes: -
     For partial withdrawals, the system should reduce the available capital from the corresponding branch/currency balance.
     A full withdrawal should close the available capital for that specific branch/currency.
 
-    Future Investor Dashboard
-
-    Later, we will create a read-only Investor Dashboard for each investor.
-
-    The dashboard should show:
-
-        a. Total capital
-        b. Capital by branch
-        c. Capital by currency
-        d. All capital deposits
-        e. Partial and full withdrawals
-        f. Current available capital
-        g. Capital transaction history
-        h. Profit/Loss
-        i. Available profit for withdrawal
-        j. Previously withdrawn profit
-
-    The dashboard should only display information.
-    Investors should not be able to directly edit capital, profit, balances, or transactions from the dashboard.
-
 5. Profit Distribution Form for Investors and Employees
 
     For Profit Distribution, it would be better to use IRR as the basis, because our actual capital is also in IRR.
@@ -162,6 +143,23 @@ Planning on these DocTypes: -
     and control what each investor is allowed to view.
 
 7. Investor Portal/Report/Dashboard
+
+    The dashboard should show:
+
+        a. Total capital
+        b. Capital by branch
+        c. Capital by currency
+        d. All capital deposits
+        e. Partial and full withdrawals
+        f. Current available capital
+        g. Capital transaction history
+        h. Profit/Loss
+        i. Available profit for withdrawal
+        j. Previously withdrawn profit
+
+    The dashboard should only display information.
+
+    Investors should not be able to directly edit capital, profit, balances, or transactions from the dashboard.
     a. Period Information
     Profit Distribution Number — automatic
     From Date

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_bulk_edit": 1,
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "EXP-.#####",
  "creation": "2026-09-24 17:22:19.760750",
@@ -39,27 +40,34 @@
   {
    "fieldname": "frequency",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Frequency",
-   "options": "Daily\nWeekly\nMonthly\nAnnual\nOne-time"
+   "options": "Daily\nWeekly\nMonthly\nAnnual\nOne-time",
+   "reqd": 1
   },
   {
    "fieldname": "branch",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Branch",
-   "options": "Branch"
+   "options": "Branch",
+   "reqd": 1
   },
   {
    "fieldname": "priority",
    "fieldtype": "Select",
    "label": "Priority",
-   "options": "Essential\nNormal\nLow Priority"
+   "options": "Essential\nNormal\nLow Priority",
+   "reqd": 1
   },
   {
    "fieldname": "expense_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Expense Name (Debit Account)",
    "link_filters": "[[\"Account\",\"root_type\",\"=\",\"Expense\"],[\"Account\",\"company\",\"=\",\"eval: doc.company\"],[\"Account\",\"is_group\",\"=\",0]]",
-   "options": "Account"
+   "options": "Account",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_rjgk",
@@ -69,44 +77,52 @@
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "reqd": 1
   },
   {
    "fieldname": "amount",
    "fieldtype": "Int",
-   "label": "Amount"
+   "label": "Amount",
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "currency",
    "fieldtype": "Link",
    "label": "Currency",
-   "options": "Currency"
+   "options": "Currency",
+   "reqd": 1
   },
   {
    "fieldname": "paid_from",
    "fieldtype": "Link",
    "label": "Paid from (Credit Account)",
    "link_filters": "[[\"Account\",\"account_type\",\"in\",[\"Cash\",\"Bank\"]],[\"Account\",\"company\",\"=\",\"eval:doc.company\"],[\"Account\",\"is_group\",\"=\",0]]",
-   "options": "Account"
+   "options": "Account",
+   "reqd": 1
   },
   {
    "default": "Today",
    "fieldname": "transaction_date",
    "fieldtype": "Date",
-   "label": "Date"
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
   },
   {
    "default": "1",
    "fieldname": "rate",
    "fieldtype": "Float",
-   "label": "Rate"
+   "label": "Rate",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-09-24 18:59:03.529842",
+ "modified": "2026-09-28 18:25:40.053707",
  "modified_by": "Administrator",
  "module": "Fxshop",
  "name": "Expenses and Costs",
@@ -122,6 +138,24 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "mask": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FX Manager",
+   "select": 1,
    "share": 1,
    "submit": 1,
    "write": 1
