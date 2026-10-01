@@ -20,5 +20,20 @@
                 }
             }
         });
- 	}
+ 	},
+
+    number_of_notes(frm) {
+        calculate_total(frm);
+    },
+
+    rate(frm) {
+        calculate_total(frm);
+    }
  });
+
+ function calculate_total(frm) {
+    const notes = flt(frm.doc.number_of_notes);
+    const rate = flt(frm.doc.rate);
+
+    frm.set_value("total", notes * rate);
+ }

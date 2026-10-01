@@ -30,15 +30,13 @@ class ExchangeTransactions(Document):
 			invoice.pos_profile = self.teller
 			invoice.append(
 				"payments",
-				{
-					"mode_of_payment": self.teller,
-					"amount": self.total,
-				},
+				{"mode_of_payment": self.teller, "amount": self.total, "cost_center": self.branch},
 			)
 
 		invoice.company = self.company
 		invoice.posting_date = self.transaction_date
 		invoice.update_stock = True
+		invoice.cost_center = self.branch
 
 		invoice.append(
 			"items",
@@ -47,6 +45,7 @@ class ExchangeTransactions(Document):
 				"qty": self.number_of_notes,
 				"rate": self.rate,
 				"warehouse": self.branch,
+				"cost_center": self.branch,
 			},
 		)
 
