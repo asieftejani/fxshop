@@ -19,7 +19,9 @@ class ExchangeTransactions(Document):
 			invoice = frappe.new_doc("Purchase Invoice")
 			invoice.supplier = self.customer
 			invoice.is_paid = True
-			invoice.cash_bank_account = self.teller + " - SLLC"
+			invoice.cash_bank_account = (
+				self.teller + " - " + frappe.db.get_value("Company", self.company, "abbr")
+			)
 
 		else:
 			invoice = frappe.new_doc("Sales Invoice")
@@ -44,7 +46,7 @@ class ExchangeTransactions(Document):
 				"item_code": self.currency,
 				"qty": self.number_of_notes,
 				"rate": self.rate,
-				"warehouse": self.warehouse,
+				"warehouse": self.branch,
 			},
 		)
 

@@ -2,9 +2,9 @@
 
 FX Shop - Simplified Currency/Exchange transactions on top of ERPNext (required dependency)
 
-Planning on these DocTypes: -
+Currently these DocTypes are available: -
 
-1. Exchange Transactions (includes Trading of currencies) - Treats each currency (USD, EUR, AED, etc..) as stock so that gross profit per transaction can be known using either FIFO/LIFO/AVCO method. May not be in line with IAS 2/21 or IFRS 9
+1. Exchange Transactions (includes Trading of currencies) - Treats each currency (USD, EUR, AED, etc..) as stock so that gross profit per transaction can be known using either FIFO/LIFO/AVCO method. May not be in line with IAS 2/21 or IFRS 9. Note: - Teller name must match Mode of Payment (less the company abbreviation) and Warehouse must match the Cost Center
 2. Partner Transfer ((Hawala and Reverse Hawala)) - Nostro/Vostro transactions done by partners in other countries. It uses journal entries under the hood
 3. Expenses and Costs Form
 
@@ -125,7 +125,7 @@ Planning on these DocTypes: -
     Paid From — Cash / Bank / or any other account. The balance of the selected cash or bank account must be updated accordingly.
     Finally, the form should be submitted to the Owner for approval. The payment should only be allowed after the Owner approves the expense.
 
-6. Investor Registration Form
+6. Investor Registration Form (there is already a shareholder form which we can use)
 
     a. Investor First Name
     b. Investor Last Name
@@ -262,7 +262,6 @@ Planning on these DocTypes: -
 
 These DocTypes should be fully integrated with ERPNext accounting so that the transactions automatically update the relevant accounts,
 cash/bank balances, and profit & loss where applicable.
-
 
 
 

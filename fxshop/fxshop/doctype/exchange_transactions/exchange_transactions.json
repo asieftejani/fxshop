@@ -11,12 +11,12 @@
   "section_break_swmt",
   "transaction_date",
   "company",
-  "doctype_link",
   "teller",
+  "doctype_link",
   "column_break_zbvh",
   "buy_or_sell",
   "customer",
-  "warehouse",
+  "branch",
   "amended_from",
   "items_section",
   "currency",
@@ -33,6 +33,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "default": "Today",
    "fieldname": "transaction_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -54,6 +55,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Cash Customer",
    "fieldname": "customer",
    "fieldtype": "Dynamic Link",
    "label": "Customer",
@@ -66,7 +68,7 @@
    "label": "Items (put child table for multiple items)"
   },
   {
-   "default": "EUR",
+   "default": "USD",
    "fieldname": "currency",
    "fieldtype": "Link",
    "label": "Currency",
@@ -130,25 +132,25 @@
    "default": "Supplier",
    "fieldname": "doctype_link",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "DocType Link",
    "link_filters": "[[\"DocType\",\"name\",\"in\",[\"Customer\",\"Supplier\"]]]",
    "options": "DocType",
    "reqd": 1
   },
   {
-   "default": "Stores - SLLC",
-   "fieldname": "warehouse",
+   "fieldname": "teller",
    "fieldtype": "Link",
-   "label": "Warehouse",
-   "link_filters": "[[\"Warehouse\",\"company\",\"=\",\"eval:doc.company\"]]",
-   "options": "Warehouse",
+   "label": "Teller (Mode of Payment/Receipt)",
+   "options": "Mode of Payment",
    "reqd": 1
   },
   {
-   "fieldname": "teller",
+   "fieldname": "branch",
    "fieldtype": "Link",
-   "label": "Teller",
-   "options": "Mode of Payment",
+   "label": "Branch (Cost Center)",
+   "link_filters": "[[\"Cost Center\",\"company\",\"=\",\"eval:doc.company\"],[\"Cost Center\",\"is_group\",\"=\",0]]",
+   "options": "Cost Center",
    "reqd": 1
   }
  ],
@@ -156,7 +158,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-09-12 13:15:50.034872",
+ "modified": "2026-09-30 19:13:29.669263",
  "modified_by": "Administrator",
  "module": "Fxshop",
  "name": "Exchange Transactions",
